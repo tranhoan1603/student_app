@@ -1,0 +1,11 @@
+langchain
+langchain-community
+huggingface-hub
+transformers
+bitsandbytes
+pypdf
+langchain_chroma
+wget
+fastapi
+sentence-transformers
+accelerate

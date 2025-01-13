@@ -73,7 +73,7 @@ class Loader:
         else:
             raise ValueError('File_type must be pdf')
 
-        self.doc_splitter = split_kwargs
+        self.doc_splitter = TextSplitter(**split_kwargs)
 
     def load(self, pdf_files: Union[str, List[str]], workers: int = 1):
         if isinstance(pdf_files, str):

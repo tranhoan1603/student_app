@@ -10,3 +10,4 @@ fastapi
 langchain-community 
 faiss-cpu
 langserve
+rapidocr-onnxruntime

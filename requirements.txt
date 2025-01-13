@@ -7,5 +7,6 @@ pypdf
 langchain_chroma
 wget
 fastapi
-sentence-transformers
-accelerate
+langchain-community 
+faiss-cpu
+langserve

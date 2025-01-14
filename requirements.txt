@@ -12,3 +12,4 @@ faiss-cpu
 langserve
 rapidocr-onnxruntime
 sse_starlette
+uvicorn

@@ -9,7 +9,7 @@ wget
 fastapi
 langchain-community 
 faiss-cpu
-langserve
+langserve[all]
 rapidocr-onnxruntime
 sse_starlette
 uvicorn

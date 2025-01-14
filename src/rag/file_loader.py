@@ -36,7 +36,7 @@ class PDFLoader(BaseLoader):
             total_files = len(pdf_files)
             with tqdm(total=total_files, desc='Loading PDFs', unit='file') as pbar:
                 for result in pool.imap_unordered(load_pdf, pdf_files):
-                    doc_loaded.append(result)
+                    doc_loaded.extend(result)
                     pbar.update(1)
 
         return doc_loaded

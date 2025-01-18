@@ -1,5 +1,6 @@
 import os
 os.environ['TOKENIZERS_PARALLELISM'] = "false"
+os.environ['NGROK_AUTHTOKEN'] = 'Your ngrok authtoken'
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -8,6 +9,10 @@ from langserve import add_routes
 
 from src.base.llm_model import get_hf_llm
 from src.rag.main import build_rag_chain, InputQA, OutputQA
+
+from pyngrok import ngrok
+import nest_asyncio
+import uvicorn
 
 
 gen_kwarg = {
@@ -52,3 +57,8 @@ add_routes(app,
            path='/generative_ai'
            )
 
+#--------------------- Run API ------------------------------
+ngrok_tunnel = ngrok.connect(8000)
+print('Public URL:', ngrok_tunnel.public_url)
+nest_asyncio.apply()
+uvicorn.run(app, port=8000)

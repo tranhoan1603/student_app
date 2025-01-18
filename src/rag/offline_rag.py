@@ -46,4 +46,4 @@ class Offline_RAG:
         return rag_chain
     
     def format_docs(self, docs):
-        return "\n\n".join(docs.page_content for doc in docs)
+        return "\n\n".join(doc.page_content for doc in docs)

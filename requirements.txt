@@ -13,3 +13,4 @@ langserve[all]
 rapidocr-onnxruntime
 sse_starlette
 uvicorn
+pyngrok
